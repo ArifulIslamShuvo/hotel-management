@@ -1,8 +1,13 @@
 "use client"
+
+import Navbar from "../ui/Navbar";
+
+
+
 const HomePage = () => {
   return (
     <div>
-      <h1>This is home page</h1>
+      <Navbar/>
     </div>
   );
 };
