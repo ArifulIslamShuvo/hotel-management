@@ -1,13 +1,13 @@
-import Contents from "@/components/ui/Contents";
-import SideBar from "@/components/ui/Sidebar";
-import { Layout } from "antd";
+import AdminHeader from "@/components/view/Header/AdminHeader";
+import AdminSidebar from "@/components/view/Sidebar/AdminSidebar";
+import { Button } from "antd";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Layout hasSider>
-      <SideBar />
-      <Contents>{children}</Contents>
-    </Layout>
+    <div>
+      <AdminHeader />
+      <AdminSidebar> {children} </AdminSidebar>
+    </div>
   );
 };
 

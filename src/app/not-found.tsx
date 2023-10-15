@@ -1,8 +1,7 @@
+"use client";
+
 const NotFoundPage = () => {
-  return (
-    <div>
-      <h1>404!!! Page not founde!</h1>
-    </div>
-  );
+  return <h1>404! page not found....</h1>;
 };
+
 export default NotFoundPage;

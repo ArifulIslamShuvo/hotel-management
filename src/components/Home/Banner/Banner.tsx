@@ -1,31 +1,11 @@
 "use client";
-import { Col, Input, Row } from "antd";
-import bannerImg from "../../../assets/banner.png";
+import { Button, Col, Input, Row } from "antd";
+import bannerImg from "../../../assets/banner-3.png";
 import Image from "next/image";
 import Search from "antd/es/input/Search";
 
 const Banner = () => {
-    
   return (
-    // <div className="banner-section">
-    //   <div className="flex flex-col md:flex-row items-center">
-    //   <div className="w-full md:w-1/2 text-right">
-    //       <Image src={bannerImg} className="w-2/3 h-auto" alt="banner" />
-    //     </div>
-    //     <div className="w-full md:w-1/2 p-4">
-    //       <h1 className="text-5xl font-bold ">
-    //         Build Skills With Experts Any Time, Anywhere
-    //       </h1>
-    //       <p style={{ margin: "15px 0" }}>
-    //         We are develop yourself consistently
-    //       </p>
-    //       <div style={{}}>
-    //         <Input placeholder="Search..." />;
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-
     <Row
       justify="center"
       align="middle"

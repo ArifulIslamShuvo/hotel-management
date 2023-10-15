@@ -1,5 +1,5 @@
-
-import PublicHeader from "@/components/view/PublicHeader";
+import Navbar from "@/components/ui/Navbar/Navbar";
+import PublicHeader from "@/components/view/Header/PublicHeader";
 
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (

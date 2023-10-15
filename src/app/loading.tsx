@@ -1,9 +1,11 @@
-const Loading = () => {
+"use client"
+
+const LoadingPage = () => {
   return (
     <div>
-      <h1>Loading....</h1>
+      <h1>Loading................</h1>
     </div>
   );
 };
 
-export default Loading;
+export default LoadingPage;
