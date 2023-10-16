@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Button, Col, Row } from "antd";
 import React from "react";
 import SingleProductCard from "../SingleProductCard/SingleProductCard";

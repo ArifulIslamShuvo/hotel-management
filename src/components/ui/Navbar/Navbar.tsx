@@ -1,5 +1,5 @@
 "use client";
-import { Button, Drawer, Layout, Menu, theme } from "antd";
+import { Button, Drawer, Layout, Menu } from "antd";
 import { Content } from "antd/es/layout/layout";
 import Title from "antd/es/typography/Title";
 import Link from "next/link";
@@ -9,6 +9,8 @@ import { useState } from "react";
 import auth from "@/firebase/firebase.auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useSignOut } from "react-firebase-hooks/auth";
+import logo from "../../../assets/logo.png";
+import Image from "next/image";
 
 const { Header } = Layout;
 
@@ -49,20 +51,21 @@ const Navbar = ({
   };
 
   return (
-    <Layout className="layout">
-      <Header style={{ display: "flex", alignItems: "center" }}>
+    <Layout className="layout lg:px-36">
+      <Header className="flex justify-between place-items-center">
         <Content>
           <Link href="/">
             <Title level={3} style={{ color: "white", marginBottom: 0 }}>
-              Hostil
+              <Image src={logo} alt={""} className=" md:w-56 sm:w-28" />
             </Title>
           </Link>
         </Content>
         <Menu
-          className="lg:block hidden"
+          className="lg:block hidden "
           disabledOverflow
           theme="dark"
           mode="horizontal"
+        
           selectedKeys={[items.find((item) => item.href === pathname)?.key!]}
         >
           {items?.map((item) => {
@@ -93,7 +96,7 @@ const Navbar = ({
           <MenuOutlined />
         </Button>
         <Drawer
-          className="lg:hidden"
+          className="lg:hidden mx-3"
           title="eLearning"
           placement="right"
           onClose={onClose}

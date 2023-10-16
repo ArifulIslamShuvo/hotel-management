@@ -3,10 +3,8 @@
 import Banner from "@/components/home/Banner/Banner";
 import Features from "@/components/home/Features/Features";
 import Gallery from "@/components/home/Gallery/Gallery";
-import NavBar from "@/components/shared/NavBar";
 import AboutUs from "@/components/ui/AboutUs/AboutUs";
 import Footer from "@/components/ui/Footer/Footer"; 
-import Navbar from "@/components/ui/Navbar/Navbar";
 import Welcome from "@/components/ui/Welcome/Welcome";
 import PublicHeader from "@/components/view/Header/PublicHeader";
 import Image from "next/image";
@@ -15,8 +13,7 @@ export default function Home() {
   return (
     <div>
       <PublicHeader />
-      {/* <h1 className="text-l">This web application eLearning Platform</h1> */}
-      <Banner />
+      <Banner/>
       <Welcome />
       <Features />
       <AboutUs />
