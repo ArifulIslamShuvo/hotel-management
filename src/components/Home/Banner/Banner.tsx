@@ -8,7 +8,7 @@ import { url } from "inspector";
 
 const Banner = () => {
   return (
-    <div className="bg-[#4298fe] lg:-mt-40 max-h-[786px]">
+    <div className="bg-[#4298fe] lg:-mt-40 max-h-[800px]">
       <Row
         justify="center"
         align="middle"
@@ -19,7 +19,7 @@ const Banner = () => {
         <Col xs={24} sm={24} md={12} lg={12} xl={12}>
           <Image
             src={bannerImg}
-            className="w-full max-w-[500px] h-auto lg:-mb-56"
+            className="w-full max-w-[500px] h-auto lg:-mb-60  lg:bg-white rounded-xl shadow-sm md:p-3"
             alt="banner"
           />
         </Col>

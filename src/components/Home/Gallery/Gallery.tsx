@@ -26,7 +26,7 @@ const Gallery = () => {
         <h3>See Our Hotel View</h3>
       </div>
 
-      <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:px-44 md:px-10">
         {images.map((image, index) => (
           <div key={index} className="p-2">
             <img
