@@ -7,10 +7,10 @@ import AboutUs from "@/components/ui/AboutUs/AboutUs";
 import Footer from "@/components/ui/Footer/Footer"; 
 import Welcome from "@/components/ui/Welcome/Welcome";
 import PublicHeader from "@/components/view/Header/PublicHeader";
-import Image from "next/image";
 import BannerCard from '../components/ui/Bannercard/Bannercard';
 
 export default function Home() {
+  
   return (
     <div>
       <PublicHeader />

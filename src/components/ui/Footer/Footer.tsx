@@ -56,7 +56,7 @@ const Footer = () => {
                 placeholder="Enter Your Email"
                 className="rounded-2xl p-3 bg-white border-orange-500"
               />
-              <Button className="rounded-2xl bg-orange-500 text-white font-bold">
+              <Button className="rounded-xl bg-orange-500 text-white font-bold">
                 Primary
               </Button>
             </div>

@@ -2,13 +2,11 @@
 import { Button, Col, Input, Row } from "antd";
 import bannerImg from "../../../assets/banner-man.png";
 import Image from "next/image";
-
 import Search from "antd/es/input/Search";
-import { url } from "inspector";
-
+// bg-[#4298fe]
 const Banner = () => {
   return (
-    <div className="bg-[#4298fe] lg:-mt-40 max-h-[800px]">
+    <div className=" bg-gray-900 lg:-mt-40 max-h-[800px]">
       <Row
         justify="center"
         align="middle"

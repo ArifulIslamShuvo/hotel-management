@@ -22,8 +22,8 @@ const Gallery = () => {
   return (
     <div>
       <div className="text-center mb-12">
-        <h2 style={{ color: "green", fontWeight: "bold" }}>Gallery</h2>
-        <h3>See Our Hotel View</h3>
+        <h2 style={{ fontWeight: "bold" }}>Gallery</h2>
+        {/* <h3>See Our Hotel View</h3> */}
       </div>
 
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:px-44 md:px-10">
