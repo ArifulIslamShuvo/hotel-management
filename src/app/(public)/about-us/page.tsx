@@ -20,7 +20,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-10 ">
+        <div className="flex justify-center my-10 ">
           <div className="text-center mt-10 w-full lg:w-[30%]">
             <h2 className="text-2xl">About Beyond Hotel</h2>
             <p className="text-center py-5 text-xl font-thin text-slate-500 ">

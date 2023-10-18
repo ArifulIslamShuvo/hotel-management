@@ -5,16 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDcKDnnlfFqIjm8geKlxFQeRc3Br8y3k-g",
-  authDomain: "next-auth-728e0.firebaseapp.com",
-  projectId: "next-auth-728e0",
-  storageBucket: "next-auth-728e0.appspot.com",
-  messagingSenderId: "637727233913",
-  appId: "1:637727233913:web:67df498348dba0705381a8"
-}
+  apiKey: "AIzaSyDSyzXOURr7MA3cE5edxJu6QqxUikvLTrY",
+  authDomain: "hotel-booking-next-app.firebaseapp.com",
+  projectId: "hotel-booking-next-app",
+  storageBucket: "hotel-booking-next-app.appspot.com",
+  messagingSenderId: "485786423998",
+  appId: "1:485786423998:web:fc9cb334cdbb840814c4ef",
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export default app;
-;

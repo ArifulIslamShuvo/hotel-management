@@ -11,6 +11,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useSignOut } from "react-firebase-hooks/auth";
 import logo from "../../../assets/logo.png";
 import Image from "next/image";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { signOut } from "firebase/auth";
+import { setUser } from "@/redux/features/user/userSlice";
 
 const { Header } = Layout;
 
@@ -27,20 +30,15 @@ const Navbar = ({
 
   const [open, setOpen] = useState(false);
 
-  const [user, loading, error] = useAuthState(auth);
+  const { user } = useAppSelector((state) => state.user);
 
-  const [signOut, logoutLoading, logoutError] = useSignOut(auth);
+  const dispatch = useAppDispatch();
 
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  const handleLogout = () => {
+    signOut(auth).then(() => {
+      dispatch(setUser(null));
+    });
+  };
 
   const showDrawer = () => {
     setOpen(true);
@@ -65,7 +63,6 @@ const Navbar = ({
           disabledOverflow
           theme="dark"
           mode="horizontal"
-        
           selectedKeys={[items.find((item) => item.href === pathname)?.key!]}
         >
           {items?.map((item) => {
@@ -77,19 +74,39 @@ const Navbar = ({
           })}
         </Menu>
 
-        {!user ? (
-          <Link href="/login">
-            <Button type="primary">Login</Button>
-          </Link>
+        {!user.email ? (
+          <>
+            <div className="flex flex-col lg:flex-row justify-start items-start">
+            <Link href="/login">
+              <Button type="primary">Login</Button>
+            </Link>
+            <Link
+              style={{
+                marginLeft: "10px",
+              }}
+              href="/signup"
+            >
+              <Button type="primary">Sign Up</Button>
+            </Link>
+            </div>
+          </>
         ) : (
-          <Button
-            onClick={async () => {
-              await signOut();
-            }}
-            danger
-          >
-            Log Out
-          </Button>
+          <>
+            <Button type="text">
+              <Link
+                href="/profile"
+                style={{
+                  color: "#fff",
+                  textDecoration: "none",
+                }}
+              >
+                Dashboard
+              </Link>
+            </Button>
+            <Button onClick={handleLogout} danger>
+              Log Out
+            </Button>
+          </>
         )}
 
         <Button onClick={showDrawer} type="primary" className="lg:hidden">
@@ -97,7 +114,7 @@ const Navbar = ({
         </Button>
         <Drawer
           className="lg:hidden mx-3"
-          title="eLearning"
+          title="Beyond Hotel"
           placement="right"
           onClose={onClose}
           open={open}

@@ -6,7 +6,7 @@ import Search from "antd/es/input/Search";
 // bg-[#4298fe]
 const Banner = () => {
   return (
-    <div className=" bg-gray-900 lg:-mt-40 max-h-[800px]">
+    <div className=" bg-gray-900  lg:-mt-40 max-h-[800px]">
       <Row
         justify="center"
         align="middle"
