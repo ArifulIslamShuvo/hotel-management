@@ -1,4 +1,3 @@
-import Sidebar from "@/components/ui/Sidebar/Sidebar";
 import React from "react";
 
 const UserSidebar = ({ children }: { children: React.ReactNode }) => {
