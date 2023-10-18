@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Footer from "@/components/ui/Footer/Footer";
-import Navbar from "@/components/ui/Navbar/Navbar";
 import PublicHeader from "@/components/view/Header/PublicHeader";
 import { useSinglePostDataQuery } from "@/redux/api/postApi";
 import { useParams } from "next/navigation";

@@ -1,10 +1,8 @@
 import ProductCard from "@/components/ui/ProductCard/ProductCard";
-import PublicHeader from "@/components/view/Header/PublicHeader";
 import { useGetPostDataQuery } from "@/redux/api/postApi";
 import { setSearchTerm } from "@/redux/features/search/searchSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { IHotels } from "@/types/globalTypes";
-import { Input } from "antd";
 import React from "react";
 
 const AllRooms = () => {

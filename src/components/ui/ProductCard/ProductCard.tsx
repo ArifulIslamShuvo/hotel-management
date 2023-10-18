@@ -1,16 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import { Button, Col, Row } from "antd";
 import React from "react";
-import SingleProductCard from "../SingleProductCard/SingleProductCard";
-import Image from "next/image";
 import Link from "next/link";
 import { useAppSelector } from "@/redux/hooks";
 
 const ProductCard = ({ product }: any) => {
   const { user } = useAppSelector((state) => state.user);
-  const { _id, title, images, description, price, guest, bed } = product;
-  // console.log(images);
+  const { _id, title, images, description, guest, bed } = product;
   return (
-    <div className=" mx-auto p-4 bg-white rounded-lg shadow-lg">
+    <div className=" mx-auto bg-white rounded-lg shadow-lg">
       <div className="px-6 py-4 text-center">
         <img
           style={{
@@ -21,7 +19,6 @@ const ProductCard = ({ product }: any) => {
           src={images}
           alt="room image"
         />
-        {/* <img src={img} alt="product image" /> */}
         <div className="text-start">
           <h2 className="font-bold text-xl mb-2">{title}</h2>
           <p>{description.slice(0, 100)}</p>

@@ -8,7 +8,7 @@ const UserSidebar = ({ children }: { children: React.ReactNode }) => {
   ];
   return (
     <div>
-      <Sidebar items={items}>{children}</Sidebar>
+      {children}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 "use client";
-import { Button, Col, Input, Row } from "antd";
+import { Col, Row } from "antd";
 import bannerImg from "../../../assets/banner-man.png";
 import Image from "next/image";
 import Search from "antd/es/input/Search";
